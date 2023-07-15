@@ -31,7 +31,6 @@ class SplashscreenActivity : AppCompatActivity() {
     private fun loadSession() {
         Handler(Looper.getMainLooper()).postDelayed({
             if (appManager.isLogin() != "") {
-                Log.d("GABNIEL-SESSION", "loadSession: ${appManager.isLogin()}")
                 startActivity(Intent(this, MainActivity::class.java))
             } else startActivity(Intent(this, LoginActivity::class.java))
             finish()
